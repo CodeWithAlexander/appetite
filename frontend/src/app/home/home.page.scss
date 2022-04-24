@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Raleway:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+.homeWrap{
+    /* FirstPage */
+height: 100%;
+width: 100%;
+background: linear-gradient(175.03deg, #B11226 4%, rgba(177, 18, 38, 0.65) 99.43%);
+}
+
+.test{
+/* pexels-engin-akyurt-1435895 1 */
+color: red;
+width: 100%;
+height: 40%;
+left: 0px;
+top: 0px;
+background: url('../../assets/pexels-skyler-ewing-10009355.jpg') no-repeat;
+background-size: cover ;
+background-position: 50%;
+border-radius: 0px 0px 400px;
+}
+
+.column{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+.column .ready{
+  width: 70%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+font-family: 'Raleway', sans-serif;
+}
+.column .already a{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bottom img:nth-child(1){
+  margin-right: 2%;
+  height: 30px;
+  width: 30px;
+}
+
+.bottom img:nth-child(2){
+  height: 15px;
+  width: 15px;
+}
+.bottom img:nth-child(3){
+  margin-left: 2%;
+  height: 15px;
+  width: 15px;
+}
+
+
+
+

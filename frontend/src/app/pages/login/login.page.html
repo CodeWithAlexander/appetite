@@ -1,0 +1,31 @@
+<ion-content>
+
+  <div class="loginWrap">
+    <div class="test">
+    </div>
+
+    <form class="loginInput" #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Username:</ion-label>
+        <ion-input type="text" placeholder="John Dough" ngModel name="username"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Password:</ion-label>
+        <ion-input type="password" placeholder="*********" ngModel name="password"></ion-input>
+      </ion-item>
+
+      <ion-button color="success" type="submit">Log In</ion-button>
+
+    </form>
+
+    <div class="bottom">
+      <img src="./assets/circle.png" alt="circle">
+      <img src="./assets/circle.png" alt="circle">
+      <img src="./assets/donut.png" alt="Donut">
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-content>
+  <div class="register_wrap">
+    <form class="input_form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="title">
+        Sign Up Form
+        <p>
+          One Step Closer To Joining Our Delicious Community
+        </p>
+      </div>
+      <ion-item>
+        <ion-label position="stacked">Email:</ion-label>
+        <ion-input type="email" placeholder="Johndough@app.com"
+        ngModel
+        name="email"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Username:</ion-label>
+        <ion-input type="text" placeholder="John Dough"
+        ngModel
+        name="username"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password:</ion-label>
+        <ion-input type="password" placeholder="********"
+        ngModel
+        name="password"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Confirm Password:</ion-label>
+        <ion-input type="password" placeholder="********"
+        ngModel
+        name="confirm"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button color="success" type="submit" name="submit">Continue</ion-button>
+    </form>
+    <div class="bottom">
+      <img src="./assets/circle.png" alt="circle">
+      <img src="./assets/donut.png"alt="Donut">
+      <img src="./assets/circle.png" alt="circle">
+    </div>
+  </div>
+
+</ion-content>

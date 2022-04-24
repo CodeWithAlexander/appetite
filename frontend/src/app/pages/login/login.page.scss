@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+.loginWrap{
+    height: 100%;
+width: 100%;
+background: linear-gradient(175.03deg, #B11226 4%, rgba(177, 18, 38, 0.65) 99.43%);
+}
+.test{
+    /* pexels-engin-akyurt-1435895 1 */
+    background-color: azure;
+    width: 100%;
+    height: 40%;
+    right: 0px;
+    top: 0px;
+    background: url(../../../assets/pexels-anna-pyshniuk-6083412.jpg);
+    background-size: cover ;
+    background-position: 50%;
+    border-radius: 0px 0px 0px 400px;
+    }
+
+.loginInput{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+}
+
+ion-label{
+    --color:white !important;
+    font-size: 20px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: bold !important;
+    font-style: italic !important;
+}
+
+ion-item{
+    --background: transparent;
+}
+
+ion-input{
+    --background:white;
+    border-radius: 15px;
+    --placeholder-color:#B11226;
+}
+
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bottom img:nth-child(1){
+    margin-right: 2%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .bottom img:nth-child(2){
+    height: 15px;
+    width: 15px;
+  }
+  .bottom img:nth-child(3){
+    margin-left: 2%;
+    height: 30px;
+    width: 30px;
+  }

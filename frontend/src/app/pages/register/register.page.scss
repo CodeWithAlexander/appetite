@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Raleway:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+.register_wrap {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(175.03deg, #B11226 4%, rgba(177, 18, 38, 0.65) 99.43%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input_form {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+
+}
+
+.title {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.title p {
+    padding-left: 5%;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    width: 75%;
+}
+
+ion-item {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: black;
+    // border-radius: 13px;
+}
+
+ion-input {
+    font-weight: 400;
+    border-radius: 5px;
+    // color: white;
+    // background-color: rgba(177,18,38,0.7);
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bottom img:nth-child(1){
+  margin-right: 2%;
+  height: 15px;
+  width: 15px;
+}
+
+.bottom img:nth-child(2){
+  height: 30px;
+  width: 30px;
+}
+.bottom img:nth-child(3){
+  margin-left: 2%;
+  height: 15px;
+  width: 15px;
+}
