@@ -1,6 +1,5 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-//include database info+connection
 include("db_info.php");
 include("cors.php");
 

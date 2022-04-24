@@ -1,13 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-
-export interface Credential{
-  id: string;
-  name: string;
-  email: string;
-  password: string;
-}
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +11,8 @@ export class CredentialsService {
   constructor(private http: HttpClient) { }
 
   verifyCredentials(creds: any){
-    return this.http.post(this.url+'api.php',creds);
+     return this.http
+    .post<{ token: string }>(this.url+'api.php', creds)
+    .pipe(map((response) => response.token));
   }
 }

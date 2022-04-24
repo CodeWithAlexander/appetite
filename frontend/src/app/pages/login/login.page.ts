@@ -1,8 +1,8 @@
 import { NgForm } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CredentialsService } from 'src/app/apis/credentials.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -13,9 +13,19 @@ export class LoginPage implements OnInit {
   credentials: Credential;
   constructor(private service: CredentialsService, private alert: AlertController, private route: Router) { }
   async onSubmit(form: NgForm) {
-    console.log('hi');
-      this.service.verifyCredentials(form.value).subscribe(console.log);
-      this.route.navigate(['/posts']);
+    this.service.verifyCredentials(form.value).subscribe(
+      async (token) => {
+        localStorage.setItem('token', token);
+        this.route.navigate(['posts']);
+      },
+      async () => {
+        const alert = await this.alert.create({
+          message: 'Login Failed',
+          buttons: ['OK'],
+        });
+        await alert.present();
+      }
+    );
   }
   ngOnInit() {
   }
