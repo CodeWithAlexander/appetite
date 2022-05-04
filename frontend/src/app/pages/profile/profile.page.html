@@ -4,9 +4,10 @@
       <div class="header">
         <div class="welcome-message">
           <h1 class="hello">Hello,</h1>
-          <h1 class="name">John</h1>
+          <h1 class="name" *ngIf="username !== null">{{username.username}}</h1>
         </div>
         <div class="img-container">
+          <img src="./assets/logo.png" alt="">
         </div>
       </div>
     </div>
@@ -40,10 +41,7 @@
     <div class="user-notes">
       <div class="user-input">
         <p *ngIf="(details) !== null" contentEditable="true" id="to_change">
-          {{details.profile_notes ? details.profile : 'Without information'}}
-        </p>
-        <p *ngIf="(details) === null" contentEditable="true" id="to_change">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure voluptates suscipit fugiat, laborum illum nostrum molestiae quas sunt. Dignissimos cum facere maxime reiciendis iure porro non autem ad quia dolorum.
+          {{details.profile_notes}}
         </p>
       </div>
     </div>

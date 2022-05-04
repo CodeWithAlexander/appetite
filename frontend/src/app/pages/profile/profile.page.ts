@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ProfilePage implements OnInit {
   details: any[]=[];
+  username: any[]=[];
   inputValue: any;
   constructor(private profile: DisplayprofileService, private route: Router) { }
   //select from credentials email
@@ -30,7 +31,13 @@ export class ProfilePage implements OnInit {
     console.log(localStorage.getItem('token'));
     this.profile.getDetails().subscribe((response: any)=>{
     this.details=response;
+    console.log(response);
   });
+  console.log(localStorage.getItem('token'));
+  this.profile.getUsername().subscribe((response: any)=>{
+  this.username=response;
+  console.log(response);
+});
   }
 
 }
