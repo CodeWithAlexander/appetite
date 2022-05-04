@@ -9,4 +9,11 @@
       </div>
     </div>
   </ion-header>
+  <div class="image-wrapper">
+    <div class="upload-image">
+      <img [src]="convertedimage" alt="">
+    </div>
+    <ion-button color="success" (click)="takePicture()">Add Photo</ion-button>
+    <p class="add-title"> Add Title </p>
+  </div>
 </ion-content>

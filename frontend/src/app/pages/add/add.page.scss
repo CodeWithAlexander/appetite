@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 Ion-content {
     --background: linear-gradient(175.03deg, #B11226 4%, rgba(177, 18, 38, 0.65) 99.43%);
@@ -24,8 +25,34 @@ Ion-content {
     font-size: 2.3rem;
 }
 
+.image-wrapper{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+     width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .img-container{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.upload-image{
+    height: 224px;
+    width: 224px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.add-title{
+    height: 50px;
+    width: 224px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #B11226;
 }
