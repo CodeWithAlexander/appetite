@@ -16,7 +16,7 @@ export class LoginPage implements OnInit {
     this.service.verifyCredentials(form.value).subscribe(
       async (token) => {
         localStorage.setItem('token', token);
-        this.route.navigate(['posts']);
+        this.route.navigate(['tabs']);
       },
       async () => {
         const alert = await this.alert.create({

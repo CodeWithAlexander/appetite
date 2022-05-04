@@ -23,7 +23,7 @@ export class RegisterPage implements OnInit {
       this.service.addCredentials(form.value).subscribe(console.log);
       this.route.navigate(['/login']);
     } else if(this.continue) {
-      const x = this.alert.create({ message: 'passwords do not match' });
+      const x = this.alert.create({ message: 'Passwords do not match' });
       (await x).present();
     }
     this.continue=true;

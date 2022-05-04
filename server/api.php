@@ -1,6 +1,7 @@
 <?php
     include("db_info.php");
     include("cors.php");
+    //source https://www.youtube.com/watch?v=OSlLqDpPeVc
     require __DIR__ . '/vendor/autoload.php';
     use Firebase\JWT\JWT;
     if($_SERVER['REQUEST_METHOD'] == "POST") {

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { IntroPage } from './intro.page';
+import { FavouritePage } from './favourite.page';
 
-describe('IntroPage', () => {
-  let component: IntroPage;
-  let fixture: ComponentFixture<IntroPage>;
+describe('FavouritePage', () => {
+  let component: FavouritePage;
+  let fixture: ComponentFixture<FavouritePage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ IntroPage ],
+      declarations: [ FavouritePage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(IntroPage);
+    fixture = TestBed.createComponent(FavouritePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
