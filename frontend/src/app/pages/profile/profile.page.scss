@@ -1,32 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-:root{
-    --ion-background-color: #0000;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
 Ion-content {
     --background: linear-gradient(175.03deg, #B11226 4%, rgba(177, 18, 38, 0.65) 99.43%);
 }
-.header-wrapper{
+
+.header-wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
-.header{
+
+.header {
     display: flex;
     width: 90%;
     justify-content: space-between;
     align-items: center;
 }
 
-.header h1{
-    font-family: 'Pacifico', cursive;
-    color: black;
-    font-size: 2.3rem;
+.welcome-message {
+    width: 30%;
 }
 
-.img-container{
+.header .hello {
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+}
+
+.header .name {
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    color: white;
+    font-size: 18px;
+    text-align: right;
+}
+
+.img-container {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: grey;
+}
+
+.profile-summary {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary h1 {
+    font-size: 25px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.analytics {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top {
+    text-align: center;
+}
+
+.bottom {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom div {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-style: italic;
+    font-size: 25px;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.profile-notes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.notes h1 {
+    font-size: 25px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.user-notes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-input{
+    background-color: white;
+    width: 70%;
+    border-radius: 20px;
+}
+
+.user-input p{
+    text-align: center;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
