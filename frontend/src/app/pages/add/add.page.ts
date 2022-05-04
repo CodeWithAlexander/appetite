@@ -24,4 +24,7 @@ export class AddPage implements OnInit {
     this.convertedimage= 'data:image/jpeg;base64,'+this.picture;
         console.log(this.convertedimage);
   }
+  submitAddition(){
+    console.log('hello');
+  }
 }

@@ -14,36 +14,36 @@
       <img [src]="convertedimage" alt="">
     </div>
     <ion-button color="success" (click)="takePicture()">Add Photo</ion-button>
-    <p class="add-title"> Add Title </p>
+    <p class="add-title" contentEditable="true" id="to_title"> Add Title </p>
   </div>
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Modal Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-  
-    <ion-accordion-group>
-      <ion-accordion>
-        <ion-item slot="header">
-          <ion-label>People</ion-label>
-        </ion-item>
-  
-        <ion-list slot="content">
-          <ion-item>
-            <ion-label>Max</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label>Mike</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label>Kim</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-accordion>
-  
-    </ion-accordion-group>
-  
-  </ion-content>
+
+  <div class="content-wrapper">
+    <div class="desc-wrapper">
+      <div class="desc-title">
+        <h1>Description:</h1>
+      </div>
+      <div class="desc-input">
+        <p contentEditable="true" id="to_desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorum quaerat rerum. Labore ea soluta
+          consequatur perspiciatis fugiat enim mollitia sapiente tenetur minus ipsa ad placeat, adipisci unde, ex
+          nesciunt?
+        </p>
+      </div>
+    </div>
+    <div class="ing-wrapper">
+      <div class="ing-title">
+        <h1>Ingrediants:</h1>
+      </div>
+      <div contentEditable="true" id="to_ing" class="ing-input">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore culpa minus aut officiis quia rem
+          exercitationem asperiores, blanditiis molestias, doloremque tempora. Quis quidem, maiores perferendis eius
+          voluptatibus distinctio nemo velit.
+        </p>
+      </div>
+    </div>
+    <ion-button color="success" (click)="submitAddition()">Submit</ion-button>
+  </div>
+
+
 </ion-content>

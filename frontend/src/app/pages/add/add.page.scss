@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Raleway:wght@400&display=swap');
 
 Ion-content {
     --background: linear-gradient(175.03deg, #B11226 4%, rgba(177, 18, 38, 0.65) 99.43%);
@@ -47,6 +48,12 @@ Ion-content {
     background-color: white;
 }
 
+.upload-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
 .add-title{
     height: 50px;
     width: 224px;
@@ -55,4 +62,53 @@ Ion-content {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: #B11226;
+}
+
+.content-wrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.desc-title{
+    width: 100%;
+    text-align: left;
+}
+
+.desc-input{
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    border: black 1px solid;
+    text-align: center;
+    color:#B11226;
+    font-family: 'Raleway', sans-serif;
+    
+}
+.ing-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.ing-title{
+    width: 100%;
+    text-align: left;
+}
+
+.ing-input{
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    border: black 1px solid;
+    text-align: center;
+    color: #B11226;
+    font-family: 'Raleway', sans-serif;
 }
