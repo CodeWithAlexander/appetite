@@ -17,16 +17,16 @@
     </div>
     <div class="analytics">
       <div class="top">
-        <h2>56</h2>
+        <h2 *ngIf="details !== null">{{details.likes_received}}</h2>
         <p>Likes Received</p>
       </div>
       <div class="bottom">
         <div>
-          <h2>72</h2>
+          <h2 *ngIf="details !== null">{{details.liked_posts}}</h2>
           <p>Likes</p>
         </div>
         <div>
-          <h2>23</h2>
+          <h2 *ngIf="details !== null">{{details.number_of_posts}}</h2>
           <p>Posts</p>
         </div>
       </div>
@@ -39,15 +39,17 @@
     </div>
     <div class="user-notes">
       <div class="user-input">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum pariatur vero illum facilis officiis minus
-          esse
-          veniam dolorum nesciunt neque eaque sed dignissimos illo, harum magni voluptatem facere perferendis eum!
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam vitae amet repellat temporibus doloribus natus sequi omnis doloremque dolores ullam. Sequi magni voluptas modi, aut in enim iure nesciunt provident?</p>
+        <p *ngIf="(details) !== null" contentEditable="true" id="to_change">
+          {{details.profile_notes ? details.profile : 'Without information'}}
+        </p>
+        <p *ngIf="(details) === null" contentEditable="true" id="to_change">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure voluptates suscipit fugiat, laborum illum nostrum molestiae quas sunt. Dignissimos cum facere maxime reiciendis iure porro non autem ad quia dolorum.
+        </p>
       </div>
     </div>
 
   </div>
   <div class="button-container">
-    <ion-button color="success" type="submit">Save Changes</ion-button>
+    <ion-button color="success" (click)="getUpdates()">Save Changes</ion-button>
   </div>
 </ion-content>

@@ -5,7 +5,7 @@ import { TabsPage } from './pages/tabs/tabs.page';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('../app/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { DisplayprofileService } from 'src/app/apis/displayprofile.service';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +10,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
-
-  constructor() { }
-
+  details: any[]=[];
+  inputValue: any;
+  constructor(private profile: DisplayprofileService, private route: Router) { }
+  //select from credentials email
+  //4 rows
+  //[]
+  //ngFor []
   ngOnInit() {
+  }
+  getUpdates(){
+    const input = document.getElementById('to_change') as HTMLInputElement | null;
+  if (input != null) {
+  const hello=input.innerText;
+  this.profile.addNotes(hello).subscribe(console.log);
+}
+   }
+  ionViewDidEnter() {
+    console.log(localStorage.getItem('token'));
+    this.profile.getDetails().subscribe((response: any)=>{
+    this.details=response;
+  });
   }
 
 }
