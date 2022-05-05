@@ -10,8 +10,13 @@
 </ion-header>
 <ion-content>
   <div *ngFor="let x of dbposts" class="post-wrapper">
-    <div class="post-image"> <img [src]="x.image" alt=""></div>
-    <div ><h1 class="post-title">{{x.title}}</h1> <ion-icon name="heart-outline"></ion-icon></div>
+    <div class="post-container">
+      <img [src]="x.image" alt="">
+      <div class="post-title">
+        <h1>{{x.title}}</h1>
+        <ion-icon name="heart"></ion-icon>
+      </div>
+    </div>
   </div>
 
 </ion-content>

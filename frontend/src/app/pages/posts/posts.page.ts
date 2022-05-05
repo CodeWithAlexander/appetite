@@ -14,13 +14,14 @@ export class PostsPage implements OnInit {
   constructor(private posts: GetpostService) { }
   ngOnInit() {
   }
+  addLike(){
+    console.log('i like');
+  }
   ionViewDidEnter() {
     console.log(localStorage.getItem('token'));
     this.posts.getDetails().subscribe((response: any)=>{
     this.dbposts=response;
     console.log(this.dbposts);
-      // this.details=response;
-    // console.log(response.image);
   });
   }
 
