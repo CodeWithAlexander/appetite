@@ -16,6 +16,7 @@ export class PostsPage implements OnInit {
   }
   addLike(id: any){
     console.log(`i like ${id}`);
+    this.posts.setLikes(id).subscribe(console.log);
   }
   ionViewDidEnter() {
     console.log(localStorage.getItem('token'));
