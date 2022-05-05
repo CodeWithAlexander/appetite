@@ -9,6 +9,6 @@
       </div>
     </div>
   </ion-header>
-  <img [src]="details.image" alt="">
+  <img *ngFor="let x of dbposts"[src]="x.image" alt="">
   
 </ion-content>

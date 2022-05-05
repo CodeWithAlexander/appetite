@@ -12,13 +12,15 @@ use \Firebase\JWT\JWT;
             $id = $token_data->id;
             $query;
             $query = $mysqli->prepare('SELECT * FROM posts');
-
+            $response=[];
         try {
             $query->execute();
             $result = $query->get_result();
             while ($row= $result->fetch_assoc()) {
-                echo json_encode($row);
+                $response[]=$row;
             }
+            $json_response=json_encode($response);
+            echo $json_response;
         } 
     catch (mysqli_sql_exception $e) {
         http_response_code(500);
