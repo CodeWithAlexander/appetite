@@ -9,18 +9,19 @@
   </div>
 </ion-header>
 <ion-content>
-
-  <div *ngFor="let x of dbposts" class="post-wrapper">
-    <div class="post-container">
-      <img [src]="x.image" alt="">
-      <div class="post-title">
-        <h1>{{x.title}}</h1>
+  <div class="wrapper-wrapper">
+    <div *ngFor="let x of dbposts" class="post-wrapper">
+      <div class="post-container">
+        <img [src]="x.image" alt="">
+        <div class="post-title">
+          <h1>{{x.title}}</h1>
+        </div>
       </div>
-    </div>
-    <div class="post-right">
-      <p>
-        {{x.description}}
-      </p>
+      <div class="post-right">
+        <p>
+          {{x.description}}
+        </p>
+      </div>
     </div>
   </div>
 

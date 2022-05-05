@@ -15,14 +15,15 @@ use \Firebase\JWT\JWT;
             $query->execute();
             $result = $query->get_result();
             $response=[];
+            $fixedresponse=[];
         try {
             $query->execute();
             $result = $query->get_result();
             while ($row= $result->fetch_assoc()) {
-                $response[]=$row;
+                $response[]=$row['post_id'];
             }
 
-            $query2 = $mysqli->prepare( 'SELECT * FROM `posts` WHERE `id` IN (' . implode(',', array_map('intval', $response)) . ')');
+            $query2 = $mysqli->prepare( 'SELECT * FROM `posts` WHERE `post_id` IN (' . implode(',', array_map('intval', $response)) . ')');
             $response2=[];
             $query2->execute();
             $result2 = $query2->get_result();

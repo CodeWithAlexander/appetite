@@ -13,6 +13,7 @@ export class LoginPage implements OnInit {
   credentials: Credential;
   constructor(private service: CredentialsService, private alert: AlertController, private route: Router) { }
   async onSubmit(form: NgForm) {
+    localStorage.removeItem('token');
     this.service.verifyCredentials(form.value).subscribe(
       async (token) => {
         localStorage.setItem('token', token);

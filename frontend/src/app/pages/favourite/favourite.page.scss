@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
 Ion-content {
     --background: linear-gradient(175.03deg, #B11226 4%, rgba(177, 18, 38, 0.65) 99.43%);
@@ -30,17 +31,46 @@ Ion-content {
     border-radius: 50%;
 }
 
-.post-wrapper{
-    display: flex;
+.wrapper-wrapper{
+
     width: 100%;
-    flex-direction: row;
-    align-items: center;
-}
-.post-container{
-    width: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
+
+.post-wrapper{
+    margin-top: 7%;
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.post-container{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+}
+.post-container h1{
+    margin-left: 5%;
+}
+.post-container img{
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 50%;
+    border: solid black 2px;
+    width: 7rem;
+    height: 7rem;
+}
 .post-right{
-    width: 50%;
+    font-family: 'Raleway', sans-serif;
+    width: 45%;
 }
