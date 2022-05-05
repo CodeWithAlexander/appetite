@@ -9,8 +9,8 @@ export class LikesService {
 
   private url= 'http://localhost/final/server/';
   constructor(private http: HttpClient) { }
+  //get all posts liked by the user in order to diplay
   getDetails(){
-    console.log('im here');
     const token=localStorage.getItem('token');
     const headers=new HttpHeaders({
       // eslint-disable-next-line @typescript-eslint/naming-convention

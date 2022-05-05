@@ -4,6 +4,9 @@
     require __DIR__ . '/vendor/autoload.php';
 use \Firebase\JWT\JWT;
     // if ($_SERVER['REQUEST_METHOD'] == "GET") {
+
+    //get user details that are stored in db
+    // #likes # posts etc...
         $auth_headers = getallheaders();
         if(isset(($auth_headers['Authorization']))) {
             $jwt_token = $auth_headers['Authorization'];

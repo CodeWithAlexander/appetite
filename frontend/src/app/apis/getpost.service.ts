@@ -15,12 +15,12 @@ export class GetpostService {
 
   private url= 'http://localhost/final/server/';
   constructor(private http: HttpClient) { }
+  //user liked a post
   setLikes(creds: any){
     const token=localStorage.getItem('token');
     return this.http.post(this.url+'likes.php',{token:`Bearer ${token}`, creds});
   }
   getDetails(){
-    console.log('im here');
     const token=localStorage.getItem('token');
     const headers=new HttpHeaders({
       // eslint-disable-next-line @typescript-eslint/naming-convention
