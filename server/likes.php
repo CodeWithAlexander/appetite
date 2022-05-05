@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $check->bind_param("ii",$id,$post_id);
     $check->execute();
     $row = $check->fetch();
-    echo $row;
+    // echo $row;
     if(!$row) {
         //insert id and post id into liked table
         $query= $mysqli->prepare("INSERT INTO likes(id,post_id) VALUES(?,?);");

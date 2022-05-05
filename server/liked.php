@@ -23,6 +23,7 @@ use \Firebase\JWT\JWT;
                 $response[]=$row['post_id'];
             }
 
+
             $query2 = $mysqli->prepare( 'SELECT * FROM `posts` WHERE `post_id` IN (' . implode(',', array_map('intval', $response)) . ')');
             $response2=[];
             $query2->execute();
