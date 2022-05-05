@@ -1,14 +1,17 @@
-<ion-content>
-  <ion-header>
-    <div class="header-wrapper">
-      <div class="header">
-        <h1>Appetite</h1>
-        <div class="img-container">
-          <img src="./assets/logo.png" alt="">
-        </div>
+<ion-header>
+  <div class="header-wrapper">
+    <div class="header">
+      <h1>Appetite</h1>
+      <div class="img-container">
+        <img src="./assets/logo.png" alt="">
       </div>
     </div>
-  </ion-header>
-  <img *ngFor="let x of dbposts"[src]="x.image" alt="">
-  
+  </div>
+</ion-header>
+<ion-content>
+  <div *ngFor="let x of dbposts" class="post-wrapper">
+    <div class="post-image"> <img [src]="x.image" alt=""></div>
+    <div ><h1 class="post-title">{{x.title}}</h1> <ion-icon name="heart-outline"></ion-icon></div>
+  </div>
+
 </ion-content>
