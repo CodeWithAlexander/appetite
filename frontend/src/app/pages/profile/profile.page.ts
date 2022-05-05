@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
+  //variables to be used in the front end
   details: any[]=[];
   username: any[]=[];
   inputValue: any;
@@ -21,22 +22,23 @@ export class ProfilePage implements OnInit {
   ngOnInit() {
   }
   getUpdates(){
+    //to_change is the new notes set by the user inside the <p></p> element
     const input = document.getElementById('to_change') as HTMLInputElement | null;
   if (input != null) {
+    //hello is a temp variable
   const hello=input.innerText;
-  this.profile.addNotes(hello).subscribe(console.log);
+  this.profile.addNotes(hello).subscribe();
 }
    }
+   //get user details stored in db
   ionViewDidEnter() {
     console.log(localStorage.getItem('token'));
     this.profile.getDetails().subscribe((response: any)=>{
     this.details=response;
-    console.log(response);
   });
-  console.log(localStorage.getItem('token'));
+  //display user's username
   this.profile.getUsername().subscribe((response: any)=>{
   this.username=response;
-  console.log(response);
 });
   }
 

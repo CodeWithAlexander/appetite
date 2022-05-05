@@ -9,20 +9,21 @@ import { GetpostService, Posts } from 'src/app/apis/getpost.service';
 })
 
 export class PostsPage implements OnInit {
+  //variables to be displayed
   details: any[]=[];
   dbposts: Posts[];
   constructor(private posts: GetpostService) { }
   ngOnInit() {
   }
+  //user liked a post
   addLike(id: any){
-    console.log(`i like ${id}`);
     this.posts.setLikes(id).subscribe(console.log);
   }
+  //get all posts and display dynamically
   ionViewDidEnter() {
     console.log(localStorage.getItem('token'));
     this.posts.getDetails().subscribe((response: any)=>{
     this.dbposts=response;
-    console.log(this.dbposts);
   });
   }
 

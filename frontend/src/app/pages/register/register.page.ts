@@ -14,15 +14,18 @@ export class RegisterPage implements OnInit {
   continue: boolean;
   constructor(private service: AddcredentialsService, private alert: AlertController, private route: Router) { }
   async onSubmit(form: NgForm) {
+    //missing credentials
     if(form.value.password===''||form.value.confirm===''||form.value.username===''||form.value.email===''){
       const x = this.alert.create({ message: 'Please enter credentials' });
       (await x).present();
       this.continue=false;
     }
+    //passwords do not match
     if (form.value.password === form.value.confirm&&this.continue) {
-      this.service.addCredentials(form.value).subscribe(console.log);
+      this.service.addCredentials(form.value).subscribe();
       this.route.navigate(['/login']);
-    } else if(this.continue) {
+    }//passowrds match
+    else if(this.continue) {
       const x = this.alert.create({ message: 'Passwords do not match' });
       (await x).present();
     }
