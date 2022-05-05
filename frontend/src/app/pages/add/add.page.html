@@ -13,8 +13,8 @@
     <div class="upload-image">
       <img [src]="convertedimage" alt="">
     </div>
-    <ion-button color="success" (click)="takePicture()">Add Photo</ion-button>
-    <p class="add-title" contentEditable="true" id="to_title"> Add Title </p>
+    <ion-button color="" (click)="takePicture()">Add Photo</ion-button>
+    <p class="add-title" spellcheck="false" contentEditable="true" id="to_title"> Add Title </p>
   </div>
 
   <div class="content-wrapper">
@@ -23,14 +23,14 @@
         <h1>Description:</h1>
       </div>
       <div class="desc-input">
-        <p contentEditable="true" id="to_desc">
+        <p spellcheck="false" contentEditable="true" id="to_desc">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorum quaerat rerum. Labore ea soluta
           consequatur perspiciatis fugiat enim mollitia sapiente tenetur minus ipsa ad placeat, adipisci unde, ex
           nesciunt?
         </p>
       </div>
     </div>
-    <ion-button color="success" (click)="submitAddition()">Submit</ion-button>
+    <ion-button color="" (click)="submitAddition()">Submit</ion-button>
   </div>
 
 

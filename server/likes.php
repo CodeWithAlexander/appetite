@@ -25,15 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $query2->bind_param("i",$id);
         $query2->execute();
 
-        //get user
-        $query3=$mysqli->prepare("select user_id from posts where post_id=?");
+        //get user 
+        $query3=$mysqli->prepare("select id from posts where post_id=?");
         $query3->bind_param("i",$post_id);
         $query3->execute();
-    
         $result = $query3->get_result();
         $row= $result->fetch_assoc();
         $query4=$mysqli->prepare("UPDATE users SET likes_received = likes_received + 1 where id=?");
-        $query4->bind_param("i",$row);
+        $query4->bind_param("i",$row['id']);
         $query4->execute();
         echo json_encode($row);
         //update other user's likes received

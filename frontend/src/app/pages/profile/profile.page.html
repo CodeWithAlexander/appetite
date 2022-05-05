@@ -40,7 +40,7 @@
     </div>
     <div class="user-notes">
       <div class="user-input">
-        <p *ngIf="(details) !== null" contentEditable="true" id="to_change">
+        <p *ngIf="(details) !== null" spellcheck="false" contentEditable="true" id="to_change">
           {{details.profile_notes}}
         </p>
       </div>
@@ -48,6 +48,6 @@
 
   </div>
   <div class="button-container">
-    <ion-button color="success" (click)="getUpdates()">Save Changes</ion-button>
+    <ion-button color="" (click)="getUpdates()">Save Changes</ion-button>
   </div>
 </ion-content>

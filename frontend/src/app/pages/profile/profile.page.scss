@@ -134,3 +134,17 @@ p {
     align-items: center;
     justify-content: center;
 }
+
+ion-button{
+  --background:white;
+  --color: #B11226;
+  --border-radius:30px;
+  border:black 2px solid !important;
+  border-radius: 30px !important;
+//   width: 100% !important;
+  font-size: 20px !important;
+  font-family: 'Raleway', sans-serif !important;
+  font-style: italic !important;
+  font-weight: bolder !important;
+
+}

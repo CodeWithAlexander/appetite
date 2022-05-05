@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Raleway:ital,wght@1,500&display=swap');
 
 
 .loginWrap{
@@ -68,4 +69,17 @@ ion-input{
     margin-left: 2%;
     height: 30px;
     width: 30px;
+  }
+  ion-button{
+    --background:white;
+    --color: #B11226;
+    --border-radius:30px;
+    border:black 2px solid !important;
+    border-radius: 30px !important;
+    height: 12% !important;
+    width: 40% !important;
+    font-size: 20px !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-style: italic !important;
+  
   }
