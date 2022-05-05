@@ -14,7 +14,7 @@
       <img [src]="x.image" alt="">
       <div class="post-title">
         <h1>{{x.title}}</h1>
-        <ion-icon name="heart"></ion-icon>
+        <ion-icon name="heart" (click)="addLike(x.post_id)"></ion-icon>
       </div>
     </div>
   </div>

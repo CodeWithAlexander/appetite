@@ -14,8 +14,8 @@ export class PostsPage implements OnInit {
   constructor(private posts: GetpostService) { }
   ngOnInit() {
   }
-  addLike(){
-    console.log('i like');
+  addLike(id: any){
+    console.log(`i like ${id}`);
   }
   ionViewDidEnter() {
     console.log(localStorage.getItem('token'));
