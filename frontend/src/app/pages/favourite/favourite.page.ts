@@ -13,11 +13,11 @@ export class FavouritePage implements OnInit {
 
   ngOnInit() {
   }
+  //fetch all liked posts from method that calls api
   ionViewDidEnter() {
     console.log(localStorage.getItem('token'));
     this.posts.getDetails().subscribe((response: any)=>{
     this.dbposts=response;
-    console.log(this.dbposts);
   });
   }
 
