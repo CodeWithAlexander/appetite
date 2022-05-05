@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class AddcredentialsService {
   url= 'http://localhost/final/server/';
   constructor(private http: HttpClient) { }
+  //add user to db
   addCredentials(creds: any){
     return this.http.post(this.url+'post_data.php',creds);
   }

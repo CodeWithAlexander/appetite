@@ -9,7 +9,7 @@ export class CredentialsService {
 
   private url='http://localhost/final/server/';
   constructor(private http: HttpClient) { }
-
+  //veify user login details
   verifyCredentials(creds: any){
      return this.http
     .post<{ token: string }>(this.url+'api.php', creds)

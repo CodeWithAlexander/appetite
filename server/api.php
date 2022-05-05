@@ -6,24 +6,28 @@
     use Firebase\JWT\JWT;
     if($_SERVER['REQUEST_METHOD'] == "POST") {
         $params = json_decode(file_get_contents("php://input"));
-
+        //variable assignment
+        //-------------------
         $username = $params->username;
         $password =$params->password;
-        // $username=$_POST["username"];
-        // $password=$_POST["password"];
+        //----------------------
         $query;
             $query = $mysqli->prepare('SELECT * FROM credentials WHERE username = ?');
         
         $query->bind_param('s', $username);
 
         try {
+            //try to find user
             $query->execute();
             $result = $query->get_result();
 
             if (mysqli_num_rows($result) == 0) {
+                //not found
                 http_response_code(404);
             } else {
+                //user was found
                 $user = $result->fetch_assoc();
+                //validate password
                 if (password_verify($password, $user['password'])) {
                     $secret_key = "key";
                     $payload = array(

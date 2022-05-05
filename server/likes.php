@@ -3,18 +3,28 @@ header('Access-Control-Allow-Origin: *');
 include("db_info.php");
 include("cors.php");
 
+
+//user liked a post
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+  //Variable assignment same as other files
+  //-----------------------------------------------------------------------------------
     $params = json_decode(file_get_contents("php://input"));
     $post_id = $params->creds;
     $json_data = $params->token;
     $to_decode = base64_decode(str_replace('_', '/', str_replace('-', '+', explode('.', $json_data)[1])));
     $token_data = json_decode($to_decode);
     $id = $token_data->id;
+    //-----------------------------------------------------------------------------------
+
+    //check if user had liked image before
     $check=$mysqli->prepare("select * from likes where id=? and post_id=?");
     $check->bind_param("ii",$id,$post_id);
     $check->execute();
     $row = $check->fetch();
     // echo $row;
+
+    //if not
     if(!$row) {
         //insert id and post id into liked table
         $query= $mysqli->prepare("INSERT INTO likes(id,post_id) VALUES(?,?);");
@@ -38,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         //update other user's likes received
         echo json_encode(array('sucess'=>$post_id));
      } else {  
+       //did like
         die();
       }
 }

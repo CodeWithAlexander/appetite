@@ -4,14 +4,23 @@
     require __DIR__ . '/vendor/autoload.php';
 use \Firebase\JWT\JWT;
     // if ($_SERVER['REQUEST_METHOD'] == "GET") {
+
+
+    //display all posts (select them all from database)   
+        
         $auth_headers = getallheaders();
         if(isset(($auth_headers['Authorization']))) {
+            //variable setting
+            //-------------------------------------------------------------------------------------------------
             $jwt_token = $auth_headers['Authorization'];
             $json_data = base64_decode(str_replace('_', '/', str_replace('-', '+', explode('.', $jwt_token)[1])));
             $token_data = json_decode($json_data);
             $id = $token_data->id;
+            //-------------------------------------------------------------------------------------------------
+
             $query;
             $query = $mysqli->prepare('SELECT * FROM posts');
+            //several posts so store in array
             $response=[];
         try {
             $query->execute();
