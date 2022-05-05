@@ -16,6 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $query= $mysqli->prepare("INSERT INTO posts(id,image,description,title) VALUES(?,?,?,?);");
     $query->bind_param("isss",$id,$image,$description,$title);
     $query->execute();
-    echo json_encode($id);
+  
+    $query2=$mysqli->prepare("UPDATE users SET number_of_posts = number_of_posts + 1 where id=?");
+    $query2->bind_param("i",$id);
+    $query2->execute();
+
 }
 ?>
